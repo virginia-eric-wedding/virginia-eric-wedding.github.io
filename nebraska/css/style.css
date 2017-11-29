@@ -7,7 +7,6 @@ html, body {
   background: #FAFAFC;
   font-family:'Spectral';
   margin: 0;
-  overflow-y: hidden;
 }
 .col-md-3{
   text-align: center;
