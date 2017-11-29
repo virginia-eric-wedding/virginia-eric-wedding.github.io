@@ -8,7 +8,6 @@ html, body {
   font-family:'Spectral';
   margin: 0;
   overflow-y: hidden;
-  overflow-x: hidden;
 }
 .col-md-3{
   text-align: center;
