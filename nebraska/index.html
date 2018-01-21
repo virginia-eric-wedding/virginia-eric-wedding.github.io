@@ -25,27 +25,34 @@
 	         
 	
   	<div class="col-md-8 main"></div>
-  	<div class="col-md-4">
-  		<div class="col-md-3"><a ui-sref="directions"><h3>Map</h3></a></div>
-  		<div class="col-md-3"><a ui-sref="hotel"><h3>Hotel</h3></a></div>
-  		<div class="col-md-3"><a ui-sref="gifts"><h3>Gifts</h3></a></div>
-  		<div class="col-md-3"><a ui-sref="rsvp"><h3>RSVP</h3></a></div>
-  	
-    		<ui-view>
+  	<div class="col-md-4 sidebar">
+      <div class="col-md-2"><a ui-sref="info"><h3>Info</h3></a></div>
+  		<div class="col-md-2"><a ui-sref="directions"><h3>Maps</h3></a></div>
+  		<div class="col-md-2"><a ui-sref="hotel"><h3>Hotel</h3></a></div>
+  		<div class="col-md-2"><a ui-sref="gifts"><h3>Gifts</h3></a></div>
+  		<div class="col-md-2"><a ui-sref="rsvp"><h3>RSVP</h3></a></div>
+  	     		<ui-view>
     			    
 				    	<br><br><br><br>
-				    	<div class="info">
-				    	    <p>May 27th, 2018
+                <div class="info">
+                
+                  <p><em>Welcome Supper</em>
+                    <br>May 26th, 2018. 7:00 PM.
+                  <br>Upstream Brewing
+                  <br>Old Market, Omaha, Nebraska 
 
-			    			<p>NP Dodge Park Pavillion
-			    			<br>Omaha, Nebraska 
+                  <p><em>Ceremony</em>
+                  <br>May 27th, 2018. 11:30 AM.
+                  <br>NP Dodge Park Pavillion
+                  <br>Omaha, Nebraska 
+                  <br>Reception and lunch to follow
 
-			    			<p>We hope you can make it!
-				    	</div>
+                  <p>We hope you can make it!
+                </div>
 
     		</ui-view>
  	</div>
- 	<div><p><a ui-sref="home" class="name">Virginia and Eric</a></p></div>
+ 	<div><p><a ui-sref="info" class="name">Virginia and Eric</a></p></div>
   	<!--<img src="data/img/photo.jpg" width="100%" height="100%"/>
     <div class="row" ng-repeat="recipe in $ctrl.data  | filter:{'title': searchText, 'season': searchText1, 'meal': searchText2}">  , 'veg': $ctrl.checkModel.veg,'vegan': $ctrl.checkModel.vegan, 'GF':$ctrl.checkModel.gf} 
      <a ui-sref="main.recipe({siteID: recipe.title})">

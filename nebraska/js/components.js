@@ -2,11 +2,7 @@ var app = angular.module('GalleryApp', ['ui.router', 'ui.bootstrap']);
 
 app.config(function($stateProvider) { 
   //create our different views as objects
-  var mainState ={
-    name: 'home', //name of the object
-    url: '/', //url to point to, or that causes this view to be triggered
-    component: 'home'
-  },directionsState = {
+  var directionsState = {
     name: 'directions', //create the right hand info panel as an object/child of the main view
     url: '/directions', //point to this url when this view is triggered
     component: 'directions'
@@ -22,22 +18,18 @@ app.config(function($stateProvider) {
     name: 'rsvp', //create the right hand info panel as an object/child of the main view
     url: '/rsvp', //point to this url when this view is triggered
     component: 'rsvp'
+  },infoState = {
+    name: 'info', //create the right hand info panel as an object/child of the main view
+    url: '/info', //point to this url when this view is triggered
+    component: 'info'
   }
   //call the states
-  $stateProvider.state(mainState); 
   $stateProvider.state(directionsState);
   $stateProvider.state(hotelState);
   $stateProvider.state(giftsState);
   $stateProvider.state(rsvpState); 
+  $stateProvider.state(infoState); 
 })
-
-
-app.component('home', {
-  bindings: { data: '<'}, //make the data we loaded into the view from the factory available to this component
-  templateUrl: 'views/home.html', //this is the html that we will plug our data into
-  controller: function () {
-  }
-});
 
 
 app.component('directions', {
@@ -66,6 +58,14 @@ app.component('gifts', {
 })
 app.component('rsvp', {
   templateUrl: 'views/rsvp.html',
+  bindings: { data: '<' },      
+  controller: function () {
+    console.log(this)
+    //banner click to return to
+  }
+})
+app.component('info', {
+  templateUrl: 'views/info.html',
   bindings: { data: '<' },      
   controller: function () {
     console.log(this)
